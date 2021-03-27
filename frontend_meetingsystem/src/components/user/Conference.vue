@@ -1,9 +1,9 @@
 <template>
   <div class="conference">
-    <img class="picture" :src="pictureUrl">
-    <div class="title">title</div>
-    <div class="location">location</div>
-    <div class="time">time</div>
+    <img class="picture" src="../../assets/locations/location2.jpeg">
+    <div class="title">{{ this.forumTitle }}</div>
+    <div class="location">{{ this.location }}</div>
+    <div class="time">{{this.time}}</div>
     <div class="content" v-for="content in contents" :key=content>{{content}}</div>
   </div>
 </template>
@@ -46,35 +46,50 @@ export default {
 
 <style scoped>
 .conference{
-  width: 300px;
-  height: 500px;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0 5px 20px rgba(25, 25, 25, .75);
 }
 
 .picture{
   position: relative;
-  border-radius: 10px;
+  border-radius: 5px;
   top: 0;
   width: 100%;
-  height: 50%;
+  height: 30%;
 }
 
 .title{
-  font-size: 15px;
+  margin-left: 10px;
+  font-size: 35px;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 20px;
+  color: black;
 }
 
 .location{
-  font-size: 12px;
-  margin-top: 10px;
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 20px;
 }
 
 .time{
-  font-size: 12px;
-  margin-top: 10px;
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+.content{
+  margin-left: 10px;
+  font-size: 20px;
+  margin-top: 20px;
 }
 
 </style>

@@ -18,7 +18,8 @@
                     :forumTitle="conference.title"
                     :location="conference.location"
                     :time="conference.time"
-                    :contents="conference.content"
+                    :contents="conference.contnet"
+                    :pictureUrl="locationImgs[0]"
         ></conference>
       </Col>
       <Col span="8" id="col2">
@@ -29,7 +30,7 @@
                     :forumTitle="conference.title"
                     :location="conference.location"
                     :time="conference.time"
-                    :contents="conference.content"
+                    :contents="conference.contnet"
         ></conference>
       </Col>
       <Col span="8" id="col3">
@@ -40,8 +41,8 @@
                     :forumTitle="conference.title"
                     :location="conference.location"
                     :time="conference.time"
-                    :contents="conference.content"
-                    :pictureUrl="locationImgs[0]"
+                    :contents="conference.contnet"
+                    :pictureUrl="url(locationImgs[0])"
         ></conference>
       </Col>
     </Row>
@@ -70,15 +71,15 @@ export default {
   },
   methods: {
     fillConferences () {
-      axios.post('http://xx.com/AllForum/getAllForums')
+      axios.post('http://120.26.60.194:8080/AllForum/getAllForums')
         .then(response => {
           for (let i = 0; i < response.data.length; i++) {
             if (i % 3 === 0) {
-              this.conferences1.add(response.data[i])
+              this.conferences1.push(response.data[i])
             } else if (i % 3 === 1) {
-              this.conferences2.add(response.data[i])
+              this.conferences2.push(response.data[i])
             } else if (i % 3 === 2) {
-              this.conferences3.add(response.data[i])
+              this.conferences3.push(response.data[i])
             }
           }
         })
