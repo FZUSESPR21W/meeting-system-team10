@@ -1,6 +1,7 @@
 <template>
   <div id="viewNotifications">
-    <Table :columns="columns" :data="data"></Table>
+    <div id="tips">已经发布的通知:</div>
+    <Table stripe border :columns="columns" :data="data" id="table_fix"></Table>
     <Button class="button" @click="add">添加</Button>
 
   </div>
@@ -68,8 +69,14 @@ export default {
 </script>
 
 <style scoped lang="less">
-.table {
-  text-align: left;
+#tips{
+  margin-left: 330px;
+  font-size: 20px;
+  font-weight: bold;
+}
+/deep/.ivu-table-row {
+  background-color: #fff;
+  border: 3px solid #000000;
 }
 .button {
   margin-bottom: 20px;

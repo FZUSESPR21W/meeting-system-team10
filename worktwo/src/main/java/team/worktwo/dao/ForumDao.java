@@ -1,4 +1,4 @@
-package team.worktwo.dao;
+package team.worktwo.Dao;
 
 import team.worktwo.pojo.Forum;
 import org.apache.ibatis.annotations.*;

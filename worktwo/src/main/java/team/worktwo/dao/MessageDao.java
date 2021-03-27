@@ -1,20 +1,16 @@
-package team.worktwo.dao;
-
-import java.util.List;
+package team.worktwo.Dao;
 
 import org.apache.ibatis.annotations.*;
 
 import com.alibaba.fastjson.JSONObject;
 
+import team.worktwo.pojo.Message;
 
 public interface MessageDao {
     
-    @Delete("DELETE FROM message WHERE forum_id IN(SELECT forum_id FROM forum "
-            + "WHERE title=#{forumTitle}) AND content=#{content})")
-    int deleteMessage(JSONObject request);
+    @Delete("DELETE FROM message WHERE id=#{id}")
+    void deleteMessage(@Param("id") int id);
     
-    @Insert("INSERT INTO message(forum_id,content) VALUES(#{forum_id},#{content})")
-    int addMessage(JSONObject request);
-    
-
+    @Insert("INSERT INTO message(id,forum_id,content) VALUES(#{id},#{forum_id},#{content}")
+    void addMessage(JSONObject request);
 }
