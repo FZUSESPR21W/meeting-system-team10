@@ -41,13 +41,35 @@ export default {
   },
   methods: {
     handleSubmit (name) {
-      // this.$refs[name].validate((valid) => {
-      //   if (valid) {
-      //     this.$Message.success('Success!')
-      //   } else {
-      //     this.$Message.error('Fail!')
-      //   }
-      // })
+      this.$refs[name].validate((valid) => {
+        if (valid) {
+          this.$Message.success('Success!')
+          this.$axios.post('/api/user/login', {
+            params: {
+              account: this.formInline.user,
+              password: this.formInline.password
+            }
+          })
+            .then(res => {
+              window.localStorage.setItem('account', this.formInline.user)
+              window.localStorage.setItem('password', this.formInline.password)
+              if (res.data.type === 1) {
+                this.$router.push({ path: '/userIndex' })
+              } else if (res.data.type === 2) {
+                this.$router.push({ path: '/viceChairmanIndex' })
+              } else if (res.data.type === 3) {
+                this.$router.push({ path: '/secretaryIndex' })
+              } else if (res.data.type === 4) {
+                this.$router.push({ path: '/chairmanIndex' })
+              }
+            }).catch(error => {
+              console.log(error)
+              this.$Message.error('Login Fail!')
+            })
+        } else {
+          this.$Message.error('Fail!')
+        }
+      })
       this.$router.push('/userIndex')
     }
   }

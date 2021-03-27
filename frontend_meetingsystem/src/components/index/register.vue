@@ -105,6 +105,20 @@ export default {
       this.$refs[name].validate((valid) => {
         if (valid) {
           this.$Message.success('Success!')
+          this.$axios.post('/user/register', {
+            params: {
+              account: this.formCustom.contact,
+              password: this.formCustom.passwd
+            }
+          })
+            .then(res => {
+              window.localStorage.setItem('account', this.formCustom.contact)
+              window.localStorage.setItem('password', this.formCustom.passwd)
+              this.$router.push({ path: '/userIndex' })
+            }).catch(error => {
+              console.log(error)
+              this.$Message.error('Rgister Fail!')
+            })
         } else {
           this.$Message.error('Fail!')
         }
