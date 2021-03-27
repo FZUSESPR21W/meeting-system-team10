@@ -1,19 +1,10 @@
 <template>
-  <div id="index">
-    <div id="panel">
-      <div id="left" @click="changeToLogin">登录</div>
-      <div id="right" @click="changeToRegister">注册</div>
-      <div v-if="isLogin===1"><Login/>
-      </div>
-      <div v-else>
-        <Register/></div>
-    </div>
-  </div>
+  <viewMembers></viewMembers>
 </template>
 
 <script>
-import Login from '../components/index/login.vue'
-import Register from '../components/index/register'
+import viewMembers from '../components/secretary/viewMembers'
+
 export default {
   name: 'index',
   data () {
@@ -22,8 +13,7 @@ export default {
     }
   },
   components: {
-    Login,
-    Register
+    viewMembers
   },
   methods: {
     changeToLogin () {
