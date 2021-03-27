@@ -8,7 +8,6 @@
       <div v-else>
         <Register/></div>
     </div>
-
   </div>
 </template>
 
