@@ -1,11 +1,10 @@
 <template>
-  <div id="index">
-  </div>
+  <div id="manageSubForum"></div>
 </template>
 
 <script>
 export default {
-  name: 'index'
+  name: 'manageSubForum.vue'
 }
 </script>
 

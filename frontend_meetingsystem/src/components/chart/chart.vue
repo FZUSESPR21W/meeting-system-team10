@@ -1,11 +1,10 @@
 <template>
-  <div id="index">
-  </div>
+  <div id="myChart"></div>
 </template>
 
 <script>
 export default {
-  name: 'index'
+  name: 'chart.vue'
 }
 </script>
 

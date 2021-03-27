@@ -1,11 +1,10 @@
 <template>
-  <div id="index">
-  </div>
+  <div id="viewMembers"></div>
 </template>
 
 <script>
 export default {
-  name: 'index'
+  name: 'viewMembers.vue'
 }
 </script>
 
