@@ -1,18 +1,18 @@
 <template>
   <div id="login">
-    <Form ref="formInline" :model="formInline" :rules="ruleInline" inline>
+    <Form ref="formInline" :model="formInline" :rules="ruleInline">
       <FormItem prop="user">
-        <Input type="text" v-model="formInline.user" placeholder="Username">
+        <Input class="input" type="text" v-model="formInline.user" placeholder="账号">
           <Icon type="ios-person-outline" slot="prepend"></Icon>
         </Input>
       </FormItem>
       <FormItem prop="password">
-        <Input type="password" v-model="formInline.password" placeholder="Password">
+        <Input type="password" v-model="formInline.password" placeholder="密码">
           <Icon type="ios-lock-outline" slot="prepend"></Icon>
         </Input>
       </FormItem>
-      <FormItem>
-        <Button type="primary" @click="handleSubmit('formInline')">登录</Button>
+      <FormItem style="display: flex;justify-content: center;">
+        <Button id="login_button" type="primary" @click="handleSubmit('formInline')">登录</Button>
       </FormItem>
     </Form>
   </div>
@@ -55,9 +55,10 @@ export default {
 </script>
 
 <style scoped lang="less">
-#login{
 
-  background-color: aquamarine;
-
+#login_button{
+  width: 320px;
+  background-color: #2a4766;
 }
+
 </style>
