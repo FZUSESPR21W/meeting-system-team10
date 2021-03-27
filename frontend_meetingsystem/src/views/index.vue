@@ -63,7 +63,7 @@ export default {
 }
 
 #background {
-  position: absolute;
+  position: fixed;
   background-image: url("../assets/login_background.jpg");
   top: 0;
   bottom: 0;
@@ -81,9 +81,9 @@ export default {
   transform: translate(-50% -50%);
   width: 400px;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 5px 20px rgba(25, 25, 25, .75);
-  padding: 40px;
+  padding: 0 40px;
   z-index: 50;
 }
 
