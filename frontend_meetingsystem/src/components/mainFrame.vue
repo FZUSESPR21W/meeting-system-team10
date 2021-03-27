@@ -1,10 +1,10 @@
 <template>
-
+  <div id="mainFrame"></div>
 </template>
 
 <script>
 export default {
-  name:"mainFrame"
+  name: 'mainFrame.vue'
 }
 </script>
 
