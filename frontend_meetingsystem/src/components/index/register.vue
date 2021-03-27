@@ -107,6 +107,7 @@ export default {
           this.$Message.success('Success!')
           this.$axios.post('/user/register', {
             params: {
+              name: this.formCustom.user,
               account: this.formCustom.contact,
               password: this.formCustom.passwd
             }

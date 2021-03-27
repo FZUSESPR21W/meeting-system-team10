@@ -44,7 +44,7 @@ export default {
       this.$refs[name].validate((valid) => {
         if (valid) {
           this.$Message.success('Success!')
-          this.$axios.post('http://120.26.60.194/api/user/login', {
+          this.$axios.post('/user/login', {
             params: {
               account: this.formInline.user,
               password: this.formInline.password
@@ -55,13 +55,13 @@ export default {
               window.localStorage.setItem('password', this.formInline.password)
               window.localStorage.setItem('type', res.data.type)
               if (res.data.type === 1) {
-                this.$router.push({ path: '/userIndex' })
+                this.$router.push({ path: '/chairmanIndex' })
               } else if (res.data.type === 2) {
                 this.$router.push({ path: '/viceChairmanIndex' })
               } else if (res.data.type === 3) {
                 this.$router.push({ path: '/secretaryIndex' })
               } else if (res.data.type === 4) {
-                this.$router.push({ path: '/chairmanIndex' })
+                this.$router.push({ path: '/userIndex' })
               }
             }).catch(error => {
               console.log(error)
