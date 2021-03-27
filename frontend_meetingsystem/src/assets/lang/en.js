@@ -40,7 +40,8 @@ module.exports = {
     add: 'add',
     title: 'Notice that has been published',
     publisher: 'Publisher',
-    notification: 'Message'
+    notification: 'Message',
+    confirm: '确认'
   },
   viewMembers: {
     name: 'Name',

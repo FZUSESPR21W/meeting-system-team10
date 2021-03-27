@@ -42,7 +42,8 @@ module.exports = {
     add: 'Hinzufügen',
     title: 'Bekanntmachung, die veröffentlicht wurde',
     publisher: 'Verlag',
-    notification: 'Nachricht'
+    notification: 'Nachricht',
+    confirm: '确认'
   },
   viewMembers: {
     name: 'Name',

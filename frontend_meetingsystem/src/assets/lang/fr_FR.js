@@ -42,7 +42,8 @@ module.exports = {
     add: 'Ajouter à',
     title: 'Avis publié',
     publisher: 'Publisher',
-    notification: 'Message'
+    notification: 'Message',
+    confirm: '确认'
   },
   viewMembers: {
     name: 'nom',

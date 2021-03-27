@@ -41,7 +41,8 @@ module.exports = {
     add: '添加',
     title: '已经发布的通知',
     publisher: '发布者',
-    notification: '消息'
+    notification: '消息',
+    confirm: '确认'
   },
   viewMembers: {
     name: '姓名',

@@ -19,6 +19,8 @@
 </template>
 
 <script>
+// import axios from 'axios'
+
 export default {
   name: 'login.vue',
   data () {
@@ -43,7 +45,7 @@ export default {
     handleSubmit (name) {
       this.$refs[name].validate((valid) => {
         if (valid) {
-          this.$Message.success('Success!')
+          // this.$Message.success('Success!')
           this.$axios.post('/user/login', {
             params: {
               account: this.formInline.user,

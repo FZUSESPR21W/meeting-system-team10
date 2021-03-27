@@ -1,9 +1,10 @@
 <template>
   <div id="viewNotifications">
 
-    <div id="tips">{{$t('viewNotification.title')}}</div>
+    <div id="tips">{{$t('viewNotifications.title')}}</div>
     <Table stripe border :columns="columns" :data="data" id="table_fix"></Table>
-    <Button class="button" @click="add">{{$t('viewNotification.add')}}</Button>
+    <Button class="button" @click="add">{{$t('viewNotifications.add')}}</Button>
+    <Button class="button" @click="confirm">{{$t('viewNotifications.confirm')}}</Button>
 
   </div>
 </template>

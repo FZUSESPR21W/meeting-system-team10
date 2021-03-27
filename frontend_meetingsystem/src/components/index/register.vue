@@ -29,6 +29,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'register',
   data () {
@@ -105,7 +107,7 @@ export default {
       this.$refs[name].validate((valid) => {
         if (valid) {
           this.$Message.success('Success!')
-          this.$axios.post('/user/register', {
+          axios.post('http://120.26.60.194:8080/user/register', {
             params: {
               name: this.formCustom.user,
               account: this.formCustom.contact,

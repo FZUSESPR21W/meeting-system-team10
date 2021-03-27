@@ -13,7 +13,7 @@ import vuescroll from 'vuescroll'
 import VueI18n from 'vue-i18n'
 
 Vue.prototype.$axios = axios
-axios.defaults.baseURL = '/foo'
+axios.defaults.baseURL = 'http://120.26.60.194:8080'
 // axios.defaults.withCredentials = true
 // axios.interceptors.request.use(config => {
 //   config.headers.token = window.localStorage.getItem('token')

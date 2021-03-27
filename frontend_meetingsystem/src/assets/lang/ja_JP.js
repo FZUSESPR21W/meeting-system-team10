@@ -42,7 +42,8 @@ module.exports = {
     add: '追加',
     title: '公開された通知',
     publisher: 'パブリッシャー',
-    notification: 'メッセージ'
+    notification: 'メッセージ',
+    confirm: '确认'
   },
   viewMembers: {
     name: '名前',
