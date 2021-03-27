@@ -11,7 +11,7 @@
 
     <Row>
       <Col span="8" id="col1">
-        <conference @click="updateSelect(conference.forumId)"
+        <conference @click="updateSelect(conference)"
                     v-for="conference in conferences1"
                     v-bind:key="conference.id"
                     :forumId="conference.id"
@@ -19,11 +19,11 @@
                     :location="conference.location"
                     :time="conference.time"
                     :contents="conference.contnet"
-                    :pictureUrl="locationImgs[0]"
+                    :isSelect="conference.isSelect"
         ></conference>
       </Col>
       <Col span="8" id="col2">
-        <conference @click="updateSelect"
+        <conference @click="updateSelect(conference)"
                     v-for="conference in conferences2"
                     v-bind:key="conference.id"
                     :forumId="conference.id"
@@ -31,10 +31,11 @@
                     :location="conference.location"
                     :time="conference.time"
                     :contents="conference.contnet"
+                    :isSelect="conference.isSelect"
         ></conference>
       </Col>
       <Col span="8" id="col3">
-        <conference @click="updateSelect"
+        <conference @click="updateSelect(conference)"
                     v-for="conference in conferences3"
                     v-bind:key="conference.id"
                     :forumId="conference.id"
@@ -42,7 +43,7 @@
                     :location="conference.location"
                     :time="conference.time"
                     :contents="conference.contnet"
-                    :pictureUrl="url(locationImgs[0])"
+                    :isSelect="conference.isSelect"
         ></conference>
       </Col>
     </Row>
@@ -85,14 +86,16 @@ export default {
           }
         })
     },
-    updateSelect (forumId) {
+    updateSelect (conference) {
+      this.$Message.success('请求成功！')
       axios.post('http://127.0.0.1:8080/select/forum', {
         account: window.localStorage.getItem('account'),
-        forumid: forumId
+        forumid: conference.forumId
       })
         .then(response => {
           if (response.data.code === 200) {
             this.$Message.success('请求成功！')
+            conference.isSelect = !conference.isSelect
           } else {
             this.$Message.error('请求失败！')
           }

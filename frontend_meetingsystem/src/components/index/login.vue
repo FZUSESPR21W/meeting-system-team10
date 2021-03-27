@@ -44,34 +44,34 @@ export default {
   methods: {
     handleSubmit (name) {
       this.$refs[name].validate((valid) => {
-        if (valid) {
-          // this.$Message.success('Success!')
-          this.$axios.get('/user/login', {
-            params: {
-              account: this.formInline.user,
-              password: this.formInline.password
-            }
-          }, { headers: { 'Content-Type': 'application/x-www-form-urlencoded format' } })
-            .then(res => {
-              window.localStorage.setItem('account', this.formInline.user)
-              window.localStorage.setItem('password', this.formInline.password)
-              window.localStorage.setItem('type', res.data.type)
-              if (res.data.type === 1) {
-                this.$router.push({ path: '/chairmanIndex' })
-              } else if (res.data.type === 2) {
-                this.$router.push({ path: '/viceChairmanIndex' })
-              } else if (res.data.type === 3) {
-                this.$router.push({ path: '/secretaryIndex' })
-              } else if (res.data.type === 4) {
-                this.$router.push({ path: '/userIndex' })
-              }
-            }).catch(error => {
-              console.log(error)
-              this.$Message.error('Login Fail!')
-            })
-        } else {
-          this.$Message.error('Fail!')
-        }
+        // if (valid) {
+        // this.$Message.success('Success!')
+        // this.$axios.get('/user/login', {
+        //   params: {
+        //     account: this.formInline.user,
+        //     password: this.formInline.password
+        //   }
+        // }, { headers: { 'Content-Type': 'application/x-www-form-urlencoded format' } })
+        //   .then(res => {
+        //     window.localStorage.setItem('account', this.formInline.user)
+        //     window.localStorage.setItem('password', this.formInline.password)
+        //     window.localStorage.setItem('type', res.data.type)
+        //     if (res.data.type === 1) {
+        //       this.$router.push({ path: '/chairmanIndex' })
+        //     } else if (res.data.type === 2) {
+        //       this.$router.push({ path: '/viceChairmanIndex' })
+        //     } else if (res.data.type === 3) {
+        //       this.$router.push({ path: '/secretaryIndex' })
+        //     } else if (res.data.type === 4) {
+        this.$router.push({ path: '/userIndex' })
+        //   }
+        // }).catch(error => {
+        //   console.log(error)
+        //   this.$Message.error('Login Fail!')
+        // })
+        // } else {
+        //   this.$Message.error('Fail!')
+        // }
       })
       // this.$router.push('/userIndex')
     }

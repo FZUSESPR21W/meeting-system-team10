@@ -1,5 +1,5 @@
 <template>
-  <div class="conference">
+  <div :class="[conference,{selected : isSelect}]">
     <img class="picture" src="../../assets/locations/location2.jpeg">
     <div class="title">{{ this.forumTitle }}</div>
     <div class="location">{{ this.location }}</div>
@@ -35,16 +35,26 @@ export default {
     contents: {
       type: Array,
       default: () => []
+    },
+    isSelect: {
+      type: Boolean,
+      default: false
     }
   },
   data: function () {
     return {
+      conference: 'conference',
+      selected: 'selected'
     }
   }
 }
 </script>
 
 <style scoped>
+.selected{
+  box-shadow: 0 5px 20px rgb(36, 67, 94);
+}
+
 .conference{
   width: 80%;
   margin-left: 10%;
