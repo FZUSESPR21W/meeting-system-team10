@@ -1,10 +1,16 @@
 <template>
-  <div id="userIndex"></div>
+  <div id="userIndex">
+    <mainFrame></mainFrame>
+  </div>
 </template>
 
 <script>
+
+import mainFrame from '@/components/mainFrame.vue'
+
 export default {
-  name: 'userIndex'
+  name: 'userIndex',
+  components: { mainFrame }
 }
 </script>
 
