@@ -1,10 +1,10 @@
 <template>
-  <div id="sendNotification"></div>
+  <div id="viewNotifications"></div>
 </template>
 
 <script>
 export default {
-  name: 'sendNotification.vue'
+  name: 'viewNotifications.vue'
 }
 </script>
 
