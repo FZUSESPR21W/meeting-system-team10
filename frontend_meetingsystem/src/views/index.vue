@@ -17,8 +17,7 @@
 </template>
 
 <script>
-import Login from '../components/index/login.vue'
-import Register from '../components/index/register'
+
 export default {
   name: 'index',
   data () {
@@ -27,8 +26,6 @@ export default {
     }
   },
   components: {
-    Login,
-    Register
   },
   methods: {
     changeToLogin () {
