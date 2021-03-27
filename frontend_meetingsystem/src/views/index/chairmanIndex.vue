@@ -1,14 +1,14 @@
 <template>
-  <div id="chaimanIndex">
-    <chart></chart>
+  <div id="chairmanIndex">
+    <chart/>
   </div>
 </template>
 
 <script>
-import chart from '../../components/chart/chart'
+import chart from '../../components/chart/chart.vue'
 
 export default {
-  name: 'chaimanIndex',
+  name: 'chairmanIndex',
   data () {
     return {
     }
