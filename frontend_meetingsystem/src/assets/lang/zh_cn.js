@@ -38,6 +38,7 @@ module.exports = {
     name: '销量'
   },
   viewNotifications: {
+    add: '添加',
     title: '已经发布的通知',
     publisher: '发布者',
     notification: '消息'
