@@ -3,8 +3,8 @@
     <img id="logo" src="../assets/logo.png" alt=""/>
     <div id="panel">
       <div style="display: flex;justify-content: center; margin-bottom: 30px;margin-top: 15px">
-        <span class="tab" @click="changeToLogin">登录</span>
-        <span class="tab" @click="changeToRegister">注册</span>
+        <span class="tab" @click="changeToLogin">{{$t('index.login')}}</span>
+        <span class="tab" @click="changeToRegister">{{$t('index.register')}}</span>
       </div>
       <div v-if="isLogin===1">
         <Login/>
