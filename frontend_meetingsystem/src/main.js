@@ -11,6 +11,9 @@ import vuescroll from 'vuescroll'
 
 import VueI18n from 'vue-i18n'
 
+import echarts from 'echarts'
+Vue.prototype.$echarts = echarts
+
 // Vue.prototype.$axios = axios
 // axios.defaults.baseURL = '/foo'
 // // axios.defaults.withCredentials = true

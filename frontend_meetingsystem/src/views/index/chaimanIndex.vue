@@ -1,10 +1,19 @@
 <template>
-  <div id="chaimanIndex"></div>
+  <div id="chaimanIndex">
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'chaimanIndex'
+  name: 'chaimanIndex',
+  data () {
+    return {
+    }
+  },
+  method: {
+  },
+  components: {
+  }
 }
 </script>
 

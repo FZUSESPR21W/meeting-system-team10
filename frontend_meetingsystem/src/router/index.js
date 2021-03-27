@@ -40,25 +40,25 @@ const routes = [
   },
   // 主席
   {
-    path: 'chairmanIndex',
+    path: '/chairmanIndex',
     name: 'chairmanIndex',
     component: ChairmanIndex
   },
   // 分论坛主席
   {
-    path: 'viceChairmanIndex',
+    path: '/viceChairmanIndex',
     name: 'viceChairmanIndex',
     component: ViceChairmanIndex
   },
   // 秘书
   {
-    path: 'secretaryIndex',
+    path: '/secretaryIndex',
     name: 'secretaryIndex',
     component: SecretaryIndex
   },
   // 普通用户
   {
-    path: 'userIndex',
+    path: '/userIndex',
     name: 'userIndex',
     component: UserIndex
   }
