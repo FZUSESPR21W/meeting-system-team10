@@ -1,0 +1,37 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1616835646493'); /* IE9 */
+  src: url('iconfont.eot?t=1616835646493#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAQMAAsAAAAACaAAAAO/AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDMAqGEIUCATYCJAMYCw4ABCAFhG0HdBs8CMieA+7m1pr4jWYeezIz58Hz5Ja9DwMhw25Uicq5OScu/RWNdqZSszVXewTuhIk7xfL4CRSQzGzTctJJWTj1nwABBRV09z/HTJc2gfy2tUtkUXTTeDygAWVe0b2jFt6JnPsthzNenc9DAE2WctK67euHGaLQNgkgkyd4aIYxPaokW3AQ7JyTCtmGhWOsN64BW93fl6/UzAEDy0R7Ufexd465fNj6YZ/pBz6DTR+/PyvAnAMTKAcKZHSufSgdP1TOREvMXWoCG1VsfNjxYV8Q0CfP1cM85SEIGJgo+OchNpo8BNjOMmu/BCYFAh+2ccHBh+1AgQkfdlCg4MM+PRao7R4r88BbEA+w5XYHSw+GHKW0xnU5ILJkkqWJ1Po7KmVZoUUHzm04k2K7EbEqxnKVHtT749j75enr3Pd7XpCWXJiWkp/Yx5amxFW9vb5kWtzaE1ahSaZ0bi91vTqJCQ+eJxjtvuP0/ft9Hj7s9+BB33v3Cn5oVIjwcLcfE1M0eiSfmhFMpI87MizmcC2asOh+o7HVN9Qb2+9rPMId1dsQLVOJ224HroQds7muVbeWvuDriOYIb9bRINPVJHCdPUskgb98szRoUCfotXt3r6BbN0daJ2Fq84LdwZxGdD9dcbsxZTezUM0aSri6EnNo82zBHPLOZx+TVgN+byyJ0COtVmGreruX/fleWen54cHJU97wf+9CHZjd/OKyS16w7JV3Kjg5nNeWeVZ8nQveK9+7lKsvbVYo+WVImnv62k9LLXXOn3elGa10r3xd7tuLWYwBAl9h+gRnvhLFG+EvBBBY/damYdGN/zuuAuDZ6sSmSFQ/DQcDGMHPI6jZp2SRZrCV2NysQACb3m9oowFoNBBA3HFe9KVMrJ0JgkNiCAYRZIKJQz5SYcvBwqU22Dg0A02Zdudd4s2kg6hIoNRqBEKM02AQxXkwiXEdqbDPwSLJd7CJyQRNX4m/0aWwCbrVTMKcHBjZwAQr7BqmfOxlv5FXxKhRkYv/Is0CL9SorE5GH4hJ+9gzq/S2s3MXxqok0Ba9jOJYYLpKSDZfjs/zdFdVNTbvnZajJDFjWqEQSA7hAEbSACZgERjXHp8zTt3/DcKjIAbRkqYS+xeEkhFMD2qoVF0D+SDnWk3n8pZZlHhszSbHBYxFERJAW2QlYj0kgOn5y0IIS87S+BaBlJ0qPGxsXflyfGVylScAjfYKWwwxRYkltkSgx05GbzHKDxgnQepYRbY0pdPHkSbITbllIqYgn4F1DgeHtGAxKWDPkcQYAA==') format('woff2'),
+  url('iconfont.woff?t=1616835646493') format('woff'),
+  url('iconfont.ttf?t=1616835646493') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1616835646493#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-flag-china:before {
+  content: "\e68f";
+}
+
+.icon-flag-france:before {
+  content: "\e690";
+}
+
+.icon-flag-germany:before {
+  content: "\e691";
+}
+
+.icon-flag-japan:before {
+  content: "\e692";
+}
+
+.icon-flag-united-kingdom:before {
+  content: "\e698";
+}
+

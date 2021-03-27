@@ -5,11 +5,15 @@ import store from './store'
 import './assets/css/global.css'
 import ViewUI from 'view-design'
 import 'view-design/dist/styles/iview.css'
+import './assets/icon/iconfont.css'
 // import axios from 'axios'
 
 import vuescroll from 'vuescroll'
 
 import VueI18n from 'vue-i18n'
+
+import echarts from 'echarts'
+Vue.prototype.$echarts = echarts
 
 // Vue.prototype.$axios = axios
 // axios.defaults.baseURL = '/foo'

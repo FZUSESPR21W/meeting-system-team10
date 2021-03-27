@@ -1,4 +1,4 @@
-package team.worktwo.dao;
+package team.worktwo.Dao;
 
 import org.apache.ibatis.annotations.*;
 
@@ -11,6 +11,6 @@ public interface MessageDao {
     @Delete("DELETE FROM message WHERE id=#{id}")
     void deleteMessage(@Param("id") int id);
     
-    @Insert("INSERT INTO message(id,forum_id,content) VALUES(#{id},#{forum_id},#{content})")
+    @Insert("INSERT INTO message(id,forum_id,content) VALUES(#{id},#{forum_id},#{content}")
     void addMessage(JSONObject request);
 }

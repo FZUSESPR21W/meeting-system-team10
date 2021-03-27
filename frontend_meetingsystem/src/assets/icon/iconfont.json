@@ -1,0 +1,44 @@
+{
+  "id": "2449188",
+  "name": "meetingsystem",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1205953",
+      "name": "flag-china",
+      "font_class": "flag-china",
+      "unicode": "e68f",
+      "unicode_decimal": 59023
+    },
+    {
+      "icon_id": "1205958",
+      "name": "flag-france",
+      "font_class": "flag-france",
+      "unicode": "e690",
+      "unicode_decimal": 59024
+    },
+    {
+      "icon_id": "1205961",
+      "name": "flag-germany",
+      "font_class": "flag-germany",
+      "unicode": "e691",
+      "unicode_decimal": 59025
+    },
+    {
+      "icon_id": "1205962",
+      "name": "flag-japan",
+      "font_class": "flag-japan",
+      "unicode": "e692",
+      "unicode_decimal": 59026
+    },
+    {
+      "icon_id": "1205978",
+      "name": "flag-united-kingdom",
+      "font_class": "flag-united-kingdom",
+      "unicode": "e698",
+      "unicode_decimal": 59032
+    }
+  ]
+}

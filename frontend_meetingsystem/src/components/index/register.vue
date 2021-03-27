@@ -116,7 +116,7 @@ export default {
 
 <style scoped lang="less">
 #register_button{
-  width: 220px;
+  width: 320px;
   background-color: #2a4766;
 }
 </style>
