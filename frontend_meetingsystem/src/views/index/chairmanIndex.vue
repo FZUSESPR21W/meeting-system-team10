@@ -1,5 +1,6 @@
 <template>
   <div id="chairmanIndex">
+    <mainFrame></mainFrame>
     <chart id="chairmanCss"/>
     <div id="background"></div>
   </div>
@@ -8,7 +9,7 @@
 
 <script>
 import chart from '../../components/chart/chart.vue'
-
+import mainFrame from '../../components/mainFrame.vue'
 export default {
   name: 'chairmanIndex',
   data () {
@@ -18,7 +19,8 @@ export default {
   method: {
   },
   components: {
-    chart: chart
+    chart: chart,
+    mainFrame
   }
 }
 </script>
