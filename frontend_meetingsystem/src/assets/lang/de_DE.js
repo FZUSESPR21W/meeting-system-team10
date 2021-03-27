@@ -39,6 +39,7 @@ module.exports = {
     name: 'Vertrieb'
   },
   viewNotifications: {
+    add: 'Hinzufügen',
     title: 'Bekanntmachung, die veröffentlicht wurde',
     publisher: 'Verlag',
     notification: 'Nachricht'

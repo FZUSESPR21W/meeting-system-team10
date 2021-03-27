@@ -39,6 +39,7 @@ module.exports = {
     name: '販売'
   },
   viewNotifications: {
+    add: '追加',
     title: '公開された通知',
     publisher: 'パブリッシャー',
     notification: 'メッセージ'

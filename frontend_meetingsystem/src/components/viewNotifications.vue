@@ -1,8 +1,8 @@
 <template>
   <div id="viewNotifications">
-    <div id="tips">已经发布的通知:</div>
+    <div id="tips">{{$t('viewNotification.title')}}</div>
     <Table stripe border :columns="columns" :data="data" id="table_fix"></Table>
-    <Button class="button" @click="add">添加</Button>
+    <Button class="button" @click="add">{{$t('viewNotification.add')}}</Button>
 
   </div>
 </template>

@@ -37,6 +37,7 @@ module.exports = {
     name: 'Sales'
   },
   viewNotifications: {
+    add: 'add',
     title: 'Notice that has been published',
     publisher: 'Publisher',
     notification: 'Message'
