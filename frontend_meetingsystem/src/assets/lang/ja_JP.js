@@ -30,5 +30,21 @@ module.exports = {
     error5: '連絡先情報を空にすることはできません！',
     error6: 'アカウントを空にすることはできません！',
     error7: '口座番号は6桁以上にする必要があります！'
+  },
+  charts: {
+    title: '各サブフォーラムの参加者数',
+    series: '参加者数',
+    data: ['人工知能', '機械学習', 'アルゴリズム', 'ビッグデータ', 'バイオニクス', '埋め込み'],
+    selected: '販売',
+    name: '販売'
+  },
+  viewNotifications: {
+    title: '公開された通知',
+    publisher: 'パブリッシャー',
+    notification: 'メッセージ'
+  },
+  viewMembers: {
+    name: '名前',
+    phone: '連絡先情報'
   }
 }

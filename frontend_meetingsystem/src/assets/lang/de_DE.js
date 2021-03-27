@@ -30,5 +30,21 @@ module.exports = {
     error5: 'Kontaktinformationen dürfen nicht leer sein!!',
     error6: 'Konto darf nicht leer sein!!',
     error7: 'Kontonummer darf nicht kleiner als 6 Ziffern sein!!'
+  },
+  charts: {
+    title: 'Anzahl der Teilnehmer in jedem Unterforum',
+    series: 'Teilnehmerzahl',
+    data: ['Künstliche Intelligenz', 'Maschinelles Lernen', 'Algorithmus', 'Big Data', 'Bionik', 'Eingebettet'],
+    selected: 'Vertrieb',
+    name: 'Vertrieb'
+  },
+  viewNotifications: {
+    title: 'Bekanntmachung, die veröffentlicht wurde',
+    publisher: 'Verlag',
+    notification: 'Nachricht'
+  },
+  viewMembers: {
+    name: 'Name',
+    phone: 'Kontaktinformationen'
   }
 }
