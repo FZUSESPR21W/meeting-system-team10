@@ -1,5 +1,6 @@
 <template>
   <div id="index">
+    <mainFrame></mainFrame>
     <img id="logo" src="../assets/logo.png" alt=""/>
     <div id="panel">
       <div style="display: flex;justify-content: center; margin-bottom: 30px;margin-top: 15px">
@@ -21,6 +22,7 @@
 
 import Login from '@/components/index/login'
 import Register from '@/components/index/register'
+import mainFrame from '@/components/mainFrame.vue'
 
 export default {
   name: 'index',
@@ -31,7 +33,8 @@ export default {
   },
   components: {
     Login,
-    Register
+    Register,
+    mainFrame
   },
   methods: {
     changeToLogin () {

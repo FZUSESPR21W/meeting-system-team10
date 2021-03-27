@@ -13,7 +13,7 @@ import vuescroll from 'vuescroll'
 import VueI18n from 'vue-i18n'
 
 Vue.prototype.$axios = axios
-// axios.defaults.baseURL = '/foo'
+axios.defaults.baseURL = 'http://120.26.60.194'
 // axios.defaults.withCredentials = true
 // axios.interceptors.request.use(config => {
 //   config.headers.token = window.localStorage.getItem('token')
@@ -47,8 +47,11 @@ Vue.config.productionTip = false
 const i18n = new VueI18n({
   locale: 'zh', // 设置默认语言
   messages: {
-    zh: require('@/assets/lang/zh_cn'),
-    en: require('@/assets/lang/en')
+    zh_cn: require('@/assets/lang/zh_cn'),
+    en: require('@/assets/lang/en'),
+    fr_FR: require('@/assets/lang/fr_FR'),
+    ja_JP: require('@/assets/lang/ja_JP'),
+    de_DE: require('@/assets/lang/de_DE')
   }
 })
 
