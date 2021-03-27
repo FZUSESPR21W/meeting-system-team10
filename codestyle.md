@@ -136,9 +136,7 @@ List<String> a = new ArrayList<String>();
 		a.remove(temp);
 		}
 	}
-	说明：以上代码的执行结果肯定会出乎大家的意料，那么试一下把“1”换成“2”，会是同样的
-	结果吗？
-	正例：
+> 正例：
 	Iterator<String> it = a.iterator();
 	while(it.hasNext()){
 		String temp = it.next();
