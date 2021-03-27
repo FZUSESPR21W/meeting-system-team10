@@ -11,36 +11,37 @@
 
     <Row>
       <Col span="8" id="col1">
-        <conference @click="updateSelect"
+        <conference @click="updateSelect(conference.forumId)"
                     v-for="conference in conferences1"
-                    v-bind:key="conference.forumId"
-                    :forumId="conference.forumId"
-                    :forumTitle="conference.forumTitle"
+                    v-bind:key="conference.id"
+                    :forumId="conference.id"
+                    :forumTitle="conference.title"
                     :location="conference.location"
                     :time="conference.time"
-                    :content="conference.content"
+                    :contents="conference.content"
         ></conference>
       </Col>
       <Col span="8" id="col2">
         <conference @click="updateSelect"
                     v-for="conference in conferences2"
-                    v-bind:key="conference.forumId"
-                    :forumId="conference.forumId"
-                    :forumTitle="conference.forumTitle"
+                    v-bind:key="conference.id"
+                    :forumId="conference.id"
+                    :forumTitle="conference.title"
                     :location="conference.location"
                     :time="conference.time"
-                    :content="conference.content"
+                    :contents="conference.content"
         ></conference>
       </Col>
       <Col span="8" id="col3">
         <conference @click="updateSelect"
                     v-for="conference in conferences3"
-                    v-bind:key="conference.forumId"
-                    :forumId="conference.forumId"
-                    :forumTitle="conference.forumTitle"
+                    v-bind:key="conference.id"
+                    :forumId="conference.id"
+                    :forumTitle="conference.title"
                     :location="conference.location"
                     :time="conference.time"
-                    :content="conference.content"
+                    :contents="conference.content"
+                    :pictureUrl="locationImgs[0]"
         ></conference>
       </Col>
     </Row>
@@ -60,21 +61,38 @@ export default {
     return {
       conferences1: [],
       conferences2: [],
-      conferences3: []
+      conferences3: [],
+      locationImgs: ['../../assets/locations/location1.jpeg',
+        '../../assets/locations/location2.jpeg',
+        '../../assets/locations/location3.jpg',
+        '../../assets/locations/location4.jpeg']
     }
   },
   methods: {
     fillConferences () {
-      axios.get()
+      axios.post('http://xx.com/AllForum/getAllForums')
         .then(response => {
-          for (let i = 0; i < response.data.data.conferences.length; i++) {
+          for (let i = 0; i < response.data.length; i++) {
             if (i % 3 === 0) {
-              this.conferences1.add(response.data.data[i])
+              this.conferences1.add(response.data[i])
             } else if (i % 3 === 1) {
-              this.conferences2.add(response.data.data[i])
+              this.conferences2.add(response.data[i])
             } else if (i % 3 === 2) {
-              this.conferences3.add(response.data.data[i])
+              this.conferences3.add(response.data[i])
             }
+          }
+        })
+    },
+    updateSelect (forumId) {
+      axios.post('http://127.0.0.1:8080/select/forum', {
+        account: window.localStorage.getItem('account'),
+        forumid: forumId
+      })
+        .then(response => {
+          if (response.data.code === 200) {
+            this.$Message.success('请求成功！')
+          } else {
+            this.$Message.error('请求失败！')
           }
         })
     }
