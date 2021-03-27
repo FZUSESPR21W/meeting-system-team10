@@ -1,0 +1,49 @@
+CREATE TABLE user
+(
+    user_id  INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT UNIQUE NOT NULL,
+    account TEXT UNIQUE NOT NULL,
+    password TEXT NOT NULL,
+    type TEXT NOT NULL
+);
+
+CREATE TABLE forum
+(
+    forum_id INTEGER PRIMARY KEY AUTOINCREMENT ,
+    title TEXT NOT NULL
+);
+
+CREATE TABLE forum_to_chairman
+(
+    id INTEGER PRIMARY KEY AUTOINCREMENT ,
+    forum_id INTEGER NOT NULL ,
+    chairman_id INTEGER NOT NULL ,
+    FOREIGN KEY (chairman_id) REFERENCES user (user_id),
+    FOREIGN KEY (forum_id) REFERENCES forum (forum_id)
+);
+
+CREATE TABLE user_to_forum
+(
+    id INTEGER PRIMARY KEY AUTOINCREMENT ,
+    user_id INTEGER NOT NULL ,
+    forum_id INTEGER NOT NULL ,
+    FOREIGN KEY (user_id) REFERENCES user (user_id),
+    FOREIGN KEY (forum_id) REFERENCES forum (forum_id)
+);
+
+CREATE TABLE meeting
+(
+    meeting_id  INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    chairman_id TEXT NOT NULL ,
+    meeting_date TEXT NOT NULL ,
+    FOREIGN KEY (chairman_id) REFERENCES user(user_id)
+);
+
+CREATE TABLE message
+(
+    id INTEGER PRIMARY KEY  AUTOINCREMENT ,
+    forum_id INTEGER NOT NULL ,
+    content TEXT,
+    FOREIGN KEY (forum_id) REFERENCES  forum
+);
