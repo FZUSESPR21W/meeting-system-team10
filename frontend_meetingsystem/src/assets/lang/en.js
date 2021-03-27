@@ -28,5 +28,21 @@ module.exports = {
     error5: 'Contact information cannot be empty!',
     error6: 'Account cannot be empty!',
     error7: 'Account number cannot be less than 6 digits!'
+  },
+  charts: {
+    title: 'Number of participants in each sub-forum',
+    series: 'Number of participants',
+    data: ['Artificial Intelligence', 'Machine Learning', 'Algorithm', 'Big Data', 'Bionics', 'Embedded'],
+    selected: 'Sales',
+    name: 'Sales'
+  },
+  viewNotifications: {
+    title: 'Notice that has been published',
+    publisher: 'Publisher',
+    notification: 'Message'
+  },
+  viewMembers: {
+    name: 'Name',
+    phone: 'Contact Information'
   }
 }

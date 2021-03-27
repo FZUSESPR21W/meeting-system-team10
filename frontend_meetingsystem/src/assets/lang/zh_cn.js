@@ -29,5 +29,21 @@ module.exports = {
     error5: '联系方式不能为空!',
     error6: '账号不能为空!',
     error7: '账号位数不能少于6位!'
+  },
+  charts: {
+    title: '各分论坛参与人数',
+    series: '参与人数',
+    data: ['人工智能', '机器学习', '算法', '大数据', '仿生学', '嵌入式'],
+    selected: '销量',
+    name: '销量'
+  },
+  viewNotifications: {
+    title: '已经发布的通知',
+    publisher: '发布者',
+    notification: '消息'
+  },
+  viewMembers: {
+    name: '姓名',
+    phone: '联系方式'
   }
 }

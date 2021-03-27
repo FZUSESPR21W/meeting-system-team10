@@ -30,5 +30,21 @@ module.exports = {
     error5: 'Les informations de contact ne peuvent pas être vides!',
     error6: 'Le compte ne peut pas être vide!',
     error7: 'Le numéro de compte ne peut pas comporter moins de 6 chiffres!'
+  },
+  charts: {
+    title: 'Nombre de participants dans chaque sous-forum',
+    series: 'Nombre de participants',
+    data: ['Intelligence Artificielle', 'Machine Learning', 'Algorithme', 'Big Data', 'Bionics', 'Embedded'],
+    selected: 'Ventes',
+    name: 'Ventes'
+  },
+  viewNotifications: {
+    title: 'Avis publié',
+    publisher: 'Publisher',
+    notification: 'Message'
+  },
+  viewMembers: {
+    name: 'nom',
+    phone: 'Informations de contact'
   }
 }
