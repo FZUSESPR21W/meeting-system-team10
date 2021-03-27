@@ -1,0 +1,41 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-9-30: Created.
+-->
+<svg>
+<metadata>
+Created by iconfont
+</metadata>
+<defs>
+
+<font id="iconfont" horiz-adv-x="1024" >
+  <font-face
+    font-family="iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    ascent="896"
+    descent="-128"
+  />
+    <missing-glyph />
+    
+    <glyph glyph-name="flag-china" unicode="&#59023;" d="M128 832a64 64 0 0 1-128 0v-960h128V832zM128 832h896v-576H128zM128 832h32v-576H128zM288 768l-30.016-65.984L192 689.984l48-48L228.032 576 288 606.016l59.968-30.016-11.968 65.984 48 48-65.984 12.032zM460 704L480 713.984l20-9.984-4 22.016 16 16-22.016 3.968L480 768l-9.984-22.016-22.016-3.968 16-16zM544 646.016l-22.016 3.968L512 672l-9.984-22.016-22.016-3.968 16-16-4-22.016 20 9.984 20-9.984-4 22.016zM457.984 553.984L448 576l-9.984-22.016-22.016-3.968 16-16-4-22.016 20 9.984 20-9.984-4 22.016 16 16zM361.984 489.984L352 512l-9.984-22.016-22.016-3.968 16-16-4-22.016 20 9.984 20-9.984-4 22.016 16 16z"  horiz-adv-x="1024" />
+
+    
+    <glyph glyph-name="flag-france" unicode="&#59024;" d="M128 832a64 64 0 0 1-128 0v-960h128V832zM128 832h288v-576H128zM416 832h288v-576h-288zM704 832h288v-576h-288zM128 832h32v-576H128z"  horiz-adv-x="1024" />
+
+    
+    <glyph glyph-name="flag-germany" unicode="&#59025;" d="M128 832a64 64 0 0 1-128 0v-960h128V832zM128 832h896v-192H128zM128 640h896v-192H128zM128 448h896v-192H128zM128 832h32v-576H128z"  horiz-adv-x="1024" />
+
+    
+    <glyph glyph-name="flag-japan" unicode="&#59026;" d="M128 832a64 64 0 0 1-128 0v-960h128V832zM128 832h896v-576H128zM128 832h32v-576H128zM576 544m-160 0a160 160 0 1 1 320 0 160 160 0 1 1-320 0Z"  horiz-adv-x="1024" />
+
+    
+    <glyph glyph-name="flag-united-kingdom" unicode="&#59032;" d="M128 832a64 64 0 0 1-128 0v-960h128V832zM128 832h896v-576H128zM128 832h32v-576H128zM512 480H128v-32h298.656L128 256h96l256 163.84V256h32zM512 608V832h-32v-192h-53.344L128 832v-64l200-128H128v-32zM640 480v-224h32v163.84L928 256h96l-298.656 192H1024v32zM1024 832l-298.656-192H672V832h-32v-224h384V640h-200L1024 768zM725.344 448L1024 256v64l-200 128zM328 448L128 320v-64l298.656 192zM480 668.16L224 832H128l298.688-192H480zM928 832l-256-163.84V640h53.312L1024 832zM1024 608H640V832h-128v-224H128v-128h384v-224h128v224h384z"  horiz-adv-x="1024" />
+
+    
+
+
+  </font>
+</defs></svg>

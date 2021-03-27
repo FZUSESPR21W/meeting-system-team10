@@ -1,7 +1,7 @@
 <template>
   <div id="index">
+    <img id="logo" src="../assets/logo.png" alt=""/>
     <div id="panel">
-      <img id="logo" src=""/>
       <div style="display: flex;justify-content: center; margin-bottom: 30px;margin-top: 15px">
         <span class="tab" @click="changeToLogin">登录</span>
         <span class="tab" @click="changeToRegister">注册</span>
@@ -47,14 +47,19 @@ export default {
 
 <style scoped lang="less">
 
-#index{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#index {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-#background{
+#logo{
+  position: relative;
+}
+
+#background {
   position: absolute;
   background-image: url("../assets/login_background.jpg");
   top: 0;
@@ -63,11 +68,13 @@ export default {
   right: 0;
   background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat
+  background-repeat: no-repeat;
+  z-index: -2;
 }
 
-#panel{
-  position: absolute;
+#panel {
+  //position: absolute;
+
   transform: translate(-50% -50%);
   width: 400px;
   background-color: white;
@@ -77,7 +84,7 @@ export default {
   z-index: 50;
 }
 
-.tab{
+.tab {
   color: #999999;
   font-size: 15px;
   font-weight: 800;
