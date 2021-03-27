@@ -4,6 +4,9 @@
       <FormItem label="账号" prop="user">
         <Input type="text" v-model="formCustom.user"></Input>
       </FormItem>
+      <FormItem label="联系方式" prop="contact">
+        <Input type="text" v-model="formCustom.contact"></Input>
+      </FormItem>
       <FormItem label="密码" prop="passwd">
         <Input type="password" v-model="formCustom.passwd"></Input>
       </FormItem>
@@ -43,6 +46,14 @@ export default {
         callback()
       }
     }
+    const validateContact = (rule, value, callback) => {
+      if (value === '') {
+        callback(new Error('联系方式不能为空!'))
+      } else {
+        callback()
+      }
+    }
+
     const validateUser = (rule, value, callback) => {
       if (value === '') {
         callback(new Error('账号不能为空!'))
@@ -61,6 +72,7 @@ export default {
     return {
       formCustom: {
         user: '',
+        contact: '',
         passwd: '',
         passwdCheck: ''
       },
@@ -73,6 +85,9 @@ export default {
         ],
         user: [
           { validator: validateUser, trigger: 'blur' }
+        ],
+        contact: [
+          { validator: validateContact, trigger: 'blur' }
         ]
       }
     }
