@@ -33,9 +33,7 @@ export default {
               }
             })
           }
-
         }
-
       ],
       data: [
         {
