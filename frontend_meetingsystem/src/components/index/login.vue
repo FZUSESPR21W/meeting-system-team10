@@ -53,6 +53,7 @@ export default {
             .then(res => {
               window.localStorage.setItem('account', this.formInline.user)
               window.localStorage.setItem('password', this.formInline.password)
+              window.localStorage.setItem('type', res.data.type)
               if (res.data.type === 1) {
                 this.$router.push({ path: '/userIndex' })
               } else if (res.data.type === 2) {
