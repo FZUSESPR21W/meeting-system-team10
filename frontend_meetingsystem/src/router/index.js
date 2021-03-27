@@ -7,7 +7,7 @@ import Login from '../components/index/login.vue'
 import Register from '../components/index/register'
 
 // 主席
-import ChairmanIndex from '../views/index/chaimanIndex.vue'
+import ChairmanIndex from '../views/index/chairmanIndex.vue'
 import ViceChairmanIndex from '../views/index/viceChairmanIndex.vue'
 import SecretaryIndex from '../views/index/secretaryIndex.vue'
 import UserIndex from '../views/index/userIndex.vue'
