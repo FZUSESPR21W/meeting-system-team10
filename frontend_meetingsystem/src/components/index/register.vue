@@ -1,20 +1,28 @@
 <template>
   <div id="register">
-    <Form ref="formCustom" :model="formCustom" :rules="ruleCustom" :label-width="80">
-      <FormItem label="账号" prop="user">
-        <Input type="text" v-model="formCustom.user"></Input>
+    <Form ref="formCustom" :model="formCustom" :rules="ruleCustom" >
+      <FormItem  prop="user">
+        <Input type="text" v-model="formCustom.user" placeholder="账号">
+          <Icon type="ios-person-outline" slot="prepend"></Icon>
+        </Input>
       </FormItem>
-      <FormItem label="联系方式" prop="contact">
-        <Input type="text" v-model="formCustom.contact"></Input>
+      <FormItem  prop="contact">
+        <Input type="text" v-model="formCustom.contact" placeholder="联系方式">
+          <Icon type="ios-call-outline" slot="prepend"></Icon>
+        </Input>
       </FormItem>
-      <FormItem label="密码" prop="passwd">
-        <Input type="password" v-model="formCustom.passwd"></Input>
+      <FormItem  prop="passwd">
+        <Input type="password" v-model="formCustom.passwd" placeholder="密码">
+          <Icon type="ios-lock-outline" slot="prepend"></Icon>
+        </Input>
       </FormItem>
-      <FormItem label="确认密码" prop="passwdCheck">
-        <Input type="password" v-model="formCustom.passwdCheck"></Input>
+      <FormItem  prop="passwdCheck">
+        <Input type="password" v-model="formCustom.passwdCheck" placeholder="确认密码">
+          <Icon type="ios-lock-outline" slot="prepend"></Icon>
+        </Input>
       </FormItem>
-      <FormItem>
-        <Button type="primary" @click="handleSubmit('formCustom')">注册</Button>
+      <FormItem style="display: flex;justify-content: center;">
+        <Button id="register_button" type="primary" @click="handleSubmit('formCustom')">注册</Button>
       </FormItem>
     </Form>
   </div>
@@ -107,9 +115,8 @@ export default {
 </script>
 
 <style scoped lang="less">
-#register{
-
-  background-color: aquamarine;
-
+#register_button{
+  width: 220px;
+  background-color: #2a4766;
 }
 </style>
