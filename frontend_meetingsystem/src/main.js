@@ -6,18 +6,15 @@ import './assets/css/global.css'
 import ViewUI from 'view-design'
 import 'view-design/dist/styles/iview.css'
 import './assets/icon/iconfont.css'
-// import axios from 'axios'
+import axios from 'axios'
 
 import vuescroll from 'vuescroll'
 
 import VueI18n from 'vue-i18n'
 
-// import echarts from 'echarts'
-// Vue.prototype.$echarts = echarts
-
-// Vue.prototype.$axios = axios
+Vue.prototype.$axios = axios
 // axios.defaults.baseURL = '/foo'
-// // axios.defaults.withCredentials = true
+// axios.defaults.withCredentials = true
 // axios.interceptors.request.use(config => {
 //   config.headers.token = window.localStorage.getItem('token')
 //   return config
