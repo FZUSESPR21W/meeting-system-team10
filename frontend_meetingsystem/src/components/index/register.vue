@@ -106,14 +106,13 @@ export default {
     handleSubmit (name) {
       this.$refs[name].validate((valid) => {
         if (valid) {
-          this.$Message.success('Success!')
           axios.post('http://120.26.60.194:8080/user/register', {
-            params: {
-              name: this.formCustom.user,
-              account: this.formCustom.contact,
-              password: this.formCustom.passwd
-            }
-          })
+
+            name: this.formCustom.user,
+            account: this.formCustom.contact,
+            password: this.formCustom.passwd
+
+          }, { headers: { 'Content-Type': 'application/json' } })
             .then(res => {
               window.localStorage.setItem('account', this.formCustom.contact)
               window.localStorage.setItem('password', this.formCustom.passwd)

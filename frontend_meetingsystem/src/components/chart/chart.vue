@@ -63,15 +63,12 @@ export default {
       })
     },
     getInfo () {
-      this.$axios.post('http://120.26.60.194/api/user/login', {
-        params: {
-          account: window.localStorage.getItem('account'),
-          password: window.localStorage.getItem('passwordt')
-        }
-      })
+      this.$axios.post('http://120.26.60.194:8080/message/search')
         .then(res => {
           this.data1 = res.data.x
           this.data2 = res.data.y
+          console.log(this.data1)
+          this.drawLine()
         }).catch(error => {
           console.log(error)
           this.$Message.error('Login Fail!')
@@ -81,6 +78,7 @@ export default {
   mounted () {
     // console.log('fdfdsfds')
     this.$nextTick(this.drawLine())
+    this.getInfo()
   },
   updated () {
     // console.log('fdfdsfds')

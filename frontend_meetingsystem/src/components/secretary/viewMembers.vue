@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     getInfo () {
-      this.$axios.post('/api/SelectForumController/selectForum', {
+      this.$axios.post('http://120.26.60.194:8080/SelectForumController/selectForum', {
         params: {
           account: window.localStorage.getItem('account')
         }

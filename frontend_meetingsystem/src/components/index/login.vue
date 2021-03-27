@@ -32,11 +32,11 @@ export default {
       ruleInline: {
         user: [
           { required: true, message: this.$t('login.mes1'), trigger: 'blur' },
-          { type: 'string', min: 6, message: this.$t('login.mes4'), trigger: 'blur' }
+          { type: 'string', min: 3, message: this.$t('login.mes4'), trigger: 'blur' }
         ],
         password: [
           { required: true, message: this.$t('login.mes3'), trigger: 'blur' },
-          { type: 'string', min: 6, message: this.$t('login.mes3'), trigger: 'blur' }
+          { type: 'string', min: 3, message: this.$t('login.mes3'), trigger: 'blur' }
         ]
       }
     }
@@ -46,12 +46,12 @@ export default {
       this.$refs[name].validate((valid) => {
         if (valid) {
           // this.$Message.success('Success!')
-          this.$axios.post('/user/login', {
+          this.$axios.get('/user/login', {
             params: {
               account: this.formInline.user,
               password: this.formInline.password
             }
-          })
+          }, { headers: { 'Content-Type': 'application/x-www-form-urlencoded format' } })
             .then(res => {
               window.localStorage.setItem('account', this.formInline.user)
               window.localStorage.setItem('password', this.formInline.password)

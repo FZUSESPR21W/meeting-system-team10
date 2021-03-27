@@ -80,11 +80,11 @@ export default {
         })
     },
     getInfo () {
-      this.$axios.post('/ForumInfo/forumDetail', {
-        params: {
-          id: window.localStorage.getItem('account')
-        }
-      })
+      this.$axios.post('http://120.26.60.194:8080/ForumInfo/forumDetail', {
+
+        id: window.localStorage.getItem('account')
+
+      }, { headers: { 'Content-Type': 'application/json' } })
         .then(res => {
           this.data = res.data.data
         }).catch(error => {
