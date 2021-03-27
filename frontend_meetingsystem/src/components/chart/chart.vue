@@ -10,7 +10,9 @@ export default {
   name: 'chart.vue',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      data1: ['人工智能', '机器学习', '算法', '大数据', '仿生学', '嵌入式'],
+      data2: [5, 20, 36, 10, 10, 20]
     }
   },
   methods: {
@@ -26,13 +28,13 @@ export default {
         },
         tooltip: {},
         xAxis: {
-          data: ['人工智能', '机器学习', '算法', '大数据', '仿生学', '嵌入式']
+          data: this.data1
         },
         yAxis: {},
         series: [{
           name: '参与人数',
           type: 'bar',
-          data: [5, 20, 36, 10, 10, 20]
+          data: this.data2
         }],
         legend: {
           selected: {
@@ -59,6 +61,21 @@ export default {
         }
 
       })
+    },
+    getInfo () {
+      this.$axios.post('http://120.26.60.194/api/user/login', {
+        params: {
+          account: window.localStorage.getItem('account'),
+          password: window.localStorage.getItem('passwordt')
+        }
+      })
+        .then(res => {
+          this.data1 = res.data.x
+          this.data2 = res.data.y
+        }).catch(error => {
+          console.log(error)
+          this.$Message.error('Login Fail!')
+        })
     }
   },
   mounted () {

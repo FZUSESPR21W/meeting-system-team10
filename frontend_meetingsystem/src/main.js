@@ -6,18 +6,15 @@ import './assets/css/global.css'
 import ViewUI from 'view-design'
 import 'view-design/dist/styles/iview.css'
 import './assets/icon/iconfont.css'
-// import axios from 'axios'
+import axios from 'axios'
 
 import vuescroll from 'vuescroll'
 
 import VueI18n from 'vue-i18n'
 
-import echarts from 'echarts'
-Vue.prototype.$echarts = echarts
-
-// Vue.prototype.$axios = axios
-// axios.defaults.baseURL = '/foo'
-// // axios.defaults.withCredentials = true
+Vue.prototype.$axios = axios
+axios.defaults.baseURL = '/foo'
+// axios.defaults.withCredentials = true
 // axios.interceptors.request.use(config => {
 //   config.headers.token = window.localStorage.getItem('token')
 //   return config
@@ -48,10 +45,13 @@ Vue.config.productionTip = false
 
 // 多语言切换
 const i18n = new VueI18n({
-  locale: 'zh', // 设置默认语言
+  locale: 'zh_cn', // 设置默认语言
   messages: {
-    zh: require('@/assets/lang/zh_cn'),
-    en: require('@/assets/lang/en')
+    zh_cn: require('@/assets/lang/zh_cn'),
+    en: require('@/assets/lang/en'),
+    fr_FR: require('@/assets/lang/fr_FR'),
+    ja_JP: require('@/assets/lang/ja_JP'),
+    de_DE: require('@/assets/lang/de_DE')
   }
 })
 

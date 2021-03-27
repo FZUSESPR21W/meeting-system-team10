@@ -2,27 +2,27 @@
   <div id="register">
     <Form ref="formCustom" :model="formCustom" :rules="ruleCustom" >
       <FormItem  prop="user">
-        <Input type="text" v-model="formCustom.user" placeholder="账号">
+        <Input type="text" v-model="formCustom.user" :placeholder="$t('register.holder1')">
           <Icon type="ios-person-outline" slot="prepend"></Icon>
         </Input>
       </FormItem>
       <FormItem  prop="contact">
-        <Input type="text" v-model="formCustom.contact" placeholder="联系方式">
+        <Input type="text" v-model="formCustom.contact" :placeholder="$t('register.holder2')">
           <Icon type="ios-call-outline" slot="prepend"></Icon>
         </Input>
       </FormItem>
       <FormItem  prop="passwd">
-        <Input type="password" v-model="formCustom.passwd" placeholder="密码">
+        <Input type="password" v-model="formCustom.passwd" :placeholder="$t('register.holder3')">
           <Icon type="ios-lock-outline" slot="prepend"></Icon>
         </Input>
       </FormItem>
       <FormItem  prop="passwdCheck">
-        <Input type="password" v-model="formCustom.passwdCheck" placeholder="确认密码">
+        <Input type="password" v-model="formCustom.passwdCheck" :placeholder="$t('register.holder4')">
           <Icon type="ios-lock-outline" slot="prepend"></Icon>
         </Input>
       </FormItem>
       <FormItem style="display: flex;justify-content: center;">
-        <Button id="register_button" type="primary" @click="handleSubmit('formCustom')">注册</Button>
+        <Button id="register_button" type="primary" @click="handleSubmit('formCustom')">{{$t('register.btn')}}</Button>
       </FormItem>
     </Form>
   </div>
@@ -34,9 +34,9 @@ export default {
   data () {
     const validatePass = (rule, value, callback) => {
       if (value === '') {
-        callback(new Error('请输入密码!'))
+        callback(new Error(this.$t('register.error1')))
       } else if (value.length < 6) {
-        callback(new Error('密码不能小于6位!'))
+        callback(new Error(this.$t('register.error2')))
       } else {
         if (this.formCustom.passwdCheck !== '') {
           // 对第二个密码框单独验证
@@ -47,16 +47,16 @@ export default {
     }
     const validatePassCheck = (rule, value, callback) => {
       if (value === '') {
-        callback(new Error('请再次输入密码!'))
+        callback(new Error(this.$t('register.error3')))
       } else if (value !== this.formCustom.passwd) {
-        callback(new Error('两次密码输入不一致!!'))
+        callback(new Error(this.$t('register.error4')))
       } else {
         callback()
       }
     }
     const validateContact = (rule, value, callback) => {
       if (value === '') {
-        callback(new Error('联系方式不能为空!'))
+        callback(new Error(this.$t('register.error5')))
       } else {
         callback()
       }
@@ -64,13 +64,13 @@ export default {
 
     const validateUser = (rule, value, callback) => {
       if (value === '') {
-        callback(new Error('账号不能为空!'))
+        callback(new Error(this.$t('register.error6')))
       }
 
       // 模拟异步验证效果
       setTimeout(() => {
         if (value.length < 6) {
-          callback(new Error('账号位数不能少于6位!'))
+          callback(new Error(this.$t('register.error7')))
         } else {
           callback()
         }
@@ -105,6 +105,21 @@ export default {
       this.$refs[name].validate((valid) => {
         if (valid) {
           this.$Message.success('Success!')
+          this.$axios.post('/user/register', {
+            params: {
+              name: this.formCustom.user,
+              account: this.formCustom.contact,
+              password: this.formCustom.passwd
+            }
+          })
+            .then(res => {
+              window.localStorage.setItem('account', this.formCustom.contact)
+              window.localStorage.setItem('password', this.formCustom.passwd)
+              this.$router.push({ path: '/userIndex' })
+            }).catch(error => {
+              console.log(error)
+              this.$Message.error('Rgister Fail!')
+            })
         } else {
           this.$Message.error('Fail!')
         }

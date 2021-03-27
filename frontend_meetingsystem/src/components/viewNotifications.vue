@@ -1,7 +1,9 @@
 <template>
   <div id="viewNotifications">
-    <Table :columns="columns" :data="data"></Table>
-    <Button class="button" @click="add">添加</Button>
+
+    <div id="tips">{{$t('viewNotification.title')}}</div>
+    <Table stripe border :columns="columns" :data="data" id="table_fix"></Table>
+    <Button class="button" @click="add">{{$t('viewNotification.add')}}</Button>
 
   </div>
 </template>
@@ -32,9 +34,7 @@ export default {
               }
             })
           }
-
         }
-
       ],
       data: [
         {
@@ -50,7 +50,6 @@ export default {
           publisher: '铧钦',
           notification: '牛逼'
         }
-
       ]
 
     }
@@ -58,18 +57,56 @@ export default {
   methods: {
     add () {
       const addData = {
-        publisher: '',
+        publisher: window.localStorage.getItem('account'),
         notification: ''
       }
       this.data.push(addData)
+    },
+    confirm () {
+      this.$axios.post('/message/add', {
+        params: {
+          account: window.localStorage.getItem('account'),
+          password: window.localStorage.getItem('passwordt'),
+          message: this.data[this.data.length() - 1]
+        }
+      })
+        .then(res => {
+          this.data = res.data.data
+          this.getInfo()
+        }).catch(error => {
+          console.log(error)
+          this.$Message.error('Rgister Fail!')
+        })
+    },
+    getInfo () {
+      this.$axios.post('/ForumInfo/forumDetail', {
+        params: {
+          id: window.localStorage.getItem('account')
+        }
+      })
+        .then(res => {
+          this.data = res.data.data
+        }).catch(error => {
+          console.log(error)
+          this.$Message.error('Rgister Fail!')
+        })
     }
+  },
+  mounted () {
+    this.getInfo()
   }
 }
 </script>
 
 <style scoped lang="less">
-.table {
-  text-align: left;
+#tips{
+  margin-left: 330px;
+  font-size: 20px;
+  font-weight: bold;
+}
+/deep/.ivu-table-row {
+  background-color: #fff;
+  border: 3px solid #000000;
 }
 .button {
   margin-bottom: 20px;

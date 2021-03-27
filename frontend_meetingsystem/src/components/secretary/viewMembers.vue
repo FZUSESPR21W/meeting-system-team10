@@ -28,6 +28,24 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    getInfo () {
+      this.$axios.post('/api/SelectForumController/selectForum', {
+        params: {
+          account: window.localStorage.getItem('account')
+        }
+      })
+        .then(res => {
+          this.data = res.data[0].jsonArray
+        }).catch(error => {
+          console.log(error)
+          this.$Message.error('getInfo Fail!')
+        })
+    }
+  },
+  mounted () {
+    this.getInfo()
   }
 }
 </script>
