@@ -1,4 +1,4 @@
-package team.worktwo.dao;
+package team.worktwo.Dao;
 
 public interface TypeDao {
 

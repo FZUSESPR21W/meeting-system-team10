@@ -14,9 +14,10 @@ import java.io.Serializable;
 @Accessors(chain = true)
 @ToString
 public class ResultBean implements Serializable {
-    //此处code,count,data严格按照layui设计
     //结果状态码
-    private int status;
+    private int code;
+    //
+    private String msg;
     //返回类型
     private int type;
 }
