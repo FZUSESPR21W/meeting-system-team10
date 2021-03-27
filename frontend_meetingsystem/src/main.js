@@ -5,8 +5,21 @@ import store from './store'
 import './assets/css/global.css'
 import ViewUI from 'view-design'
 import 'view-design/dist/styles/iview.css'
+// import axios from 'axios'
 
 import vuescroll from 'vuescroll'
+
+import VueI18n from 'vue-i18n'
+
+// Vue.prototype.$axios = axios
+// axios.defaults.baseURL = '/foo'
+// // axios.defaults.withCredentials = true
+// axios.interceptors.request.use(config => {
+//   config.headers.token = window.localStorage.getItem('token')
+//   return config
+// })
+
+Vue.use(VueI18n)
 
 Vue.use(ViewUI)
 
@@ -29,8 +42,18 @@ Vue.use(vuescroll, {
 
 Vue.config.productionTip = false
 
+// 多语言切换
+const i18n = new VueI18n({
+  locale: 'zh', // 设置默认语言
+  messages: {
+    zh: require('@/assets/lang/zh_cn'),
+    en: require('@/assets/lang/en')
+  }
+})
+
 new Vue({
   router,
+  i18n,
   store,
   render: h => h(App)
 }).$mount('#app')
