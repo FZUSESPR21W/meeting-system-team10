@@ -1,6 +1,7 @@
 <template>
   <div id="index">
     <div id="panel">
+      <img id="logo" src=""/>
       <div style="display: flex;justify-content: center; margin-bottom: 30px;margin-top: 15px">
         <span class="tab" @click="changeToLogin">登录</span>
         <span class="tab" @click="changeToRegister">注册</span>
@@ -18,6 +19,9 @@
 
 <script>
 
+import Login from '@/components/index/login'
+import Register from '@/components/index/register'
+
 export default {
   name: 'index',
   data () {
@@ -26,6 +30,8 @@ export default {
     }
   },
   components: {
+    Login,
+    Register
   },
   methods: {
     changeToLogin () {
