@@ -1,6 +1,6 @@
 <template>
   <div id="viceChairmanIndex">
-
+    <mainFrame></mainFrame>
     <div id="chartCss"><Chart/></div>
     <div id="notificationCss"><ViewNotifications/></div>
 
@@ -10,9 +10,10 @@
 <script>
 import Chart from '../../components/chart/chart.vue'
 import ViewNotifications from '../../components/viewNotifications.vue'
+import mainFrame from '../../components/mainFrame.vue'
 export default {
   name: 'viceChairmanIndex',
-  components: { ViewNotifications, Chart }
+  components: { ViewNotifications, Chart, mainFrame }
 }
 </script>
 

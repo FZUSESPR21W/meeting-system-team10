@@ -1,5 +1,6 @@
 <template>
   <div id="secretaryIndex">
+    <mainFrame></mainFrame>
     <div id="chartCss"><Chart/></div>
     <div id="notificationCss"><ViewNotifications/></div>
     <div id="secretaryCss"><viewMembers/></div>
@@ -10,10 +11,11 @@
 import Chart from '../../components/chart/chart.vue'
 import ViewNotifications from '../../components/viewNotifications.vue'
 import viewMembers from '../../components/secretary/viewMembers.vue'
+import mainFrame from '../../components/mainFrame.vue'
 export default {
   name: 'secretaryIndex',
   components: {
-    Chart, ViewNotifications, viewMembers
+    Chart, ViewNotifications, viewMembers, mainFrame
   }
 }
 </script>
